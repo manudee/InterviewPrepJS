@@ -1,0 +1,10 @@
+function reverse(str){
+
+    return str.split('').reverse().join('');
+
+}
+
+// module.exports = reverse;
+
+val = reverse('abcdsd');
+console.log(val);
