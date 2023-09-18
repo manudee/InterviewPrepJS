@@ -1,7 +1,11 @@
 #
 #
 # Multiple Pointers - averagePair
-# Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target.
+# Write a function called averagePair. 
+# Given a sorted array of integers and a target average, 
+# determine if there is a pair of values in the array
+#  where the average of the pair equals the target average. 
+# There may be more than one pair that matches the average target.
 #
 # Bonus Constraints:
 #
@@ -15,3 +19,27 @@
 # averagePair([1,3,3,5,6,7,10,12,19],8) // true
 # averagePair([-1,0,3,4,5,6], 4.1) // false
 # averagePair([],4) // false
+
+def averagePair(arr,avg_val):
+  
+    left = 0 
+    right = len(arr) - 1
+
+    while left < right:
+        curr_avg = (arr[left] + arr[right])/2
+        if(avg_val == curr_avg):
+            return True
+        elif(curr_avg < avg_val):
+            left += 1
+        elif(curr_avg > avg_val):
+            right -= 1
+    return False   
+
+val  = averagePair([1,2,3],2.5)
+print(val)
+
+val  = averagePair([1,3,3,5,6,7,10,12,19],8)
+print(val)
+
+val  = averagePair([-1,0,3,4,5,6], 4.1)
+print(val)

@@ -14,7 +14,7 @@ def countUniqueValues(arr1):
     freCnter1 = {}
 
     for val in arr1:
-        freCnter1[val] = (freCnter1.get(val,None) or 0 ) + 1
+        freCnter1[val] = (freCnter1.get(val) or 0 ) + 1
 
     cnter = 0
 

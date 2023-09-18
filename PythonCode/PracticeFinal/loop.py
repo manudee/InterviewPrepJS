@@ -13,6 +13,11 @@ for key in dictVal:
     print(dictVal[key])
 
 
-for val in dictVal.items():
+for key,val in dictVal.items():
+    print(key)
     print(val)
+
+for key in dictVal.keys():
+    print(key)
+
 
