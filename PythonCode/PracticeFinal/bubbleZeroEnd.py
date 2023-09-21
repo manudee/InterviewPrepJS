@@ -1,4 +1,5 @@
 # bubble zeroes in an array to the end
+# similar to bubble sort
 
 def bubbleZerosEnd(arr):
     # set swapped as False by default
@@ -6,7 +7,6 @@ def bubbleZerosEnd(arr):
 
     while swapped:
         swapped = False
-
         for i in range(len(arr) - 1):
             if(arr[i] != 0 and arr[i+1] == 0 ):
                 # swap
